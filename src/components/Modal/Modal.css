@@ -1,0 +1,25 @@
+.modalStyle {
+    position: fixed;
+    z-index: 300;
+    background: #ffffff;
+    width: 25%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 16px;
+    left: 37%;
+    top: 12%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease-out;
+  }
+  
+@media (max-width: 60rem) {
+    .modal {
+        width: 30%;
+        left: 35%;
+    }
+}
+.form-control {
+    border: 1px solid rgb(10, 170, 10) !important;
+    border-radius: 4px;
+}
