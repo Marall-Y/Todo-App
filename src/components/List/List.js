@@ -1,24 +1,17 @@
-import React,{useState} from 'react'
-import { Button, ListGroup, Row } from 'react-bootstrap'
+import React from "react";
+import { Button } from "react-bootstrap";
 
-import './List.css'
+import "./List.css";
 
 const List = (props) => {
-   const [item, seItem] = useState([])
+  return (
+    <div className="list">
+      <h2 className="heading">What Should I Do Today?</h2>
+      <Button variant="success" onClick={props.showModal}>
+        Add
+      </Button>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <h2 className="heading">What Should I Do Today?</h2> 
-            <Button  variant="success" onClick={props.showModal}>Add</Button>  
-            <div>
-                <Row>
-                    <ListGroup>
-                        
-                    </ListGroup>
-                </Row>                
-            </div>          
-        </div>
-    )
-}
-
-export default List
+export default List;

@@ -1,18 +1,16 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React from "react";
+import Home from "./pages/Home/Home";
 
-import Home from './pages/Home/Home'
+import "./App.css";
 
 const App = () => {
-    return (
-        <div>
-            <main className="py-3">
-                <Container>
-                <Home />
-                </Container>  
-            </main>                                  
-        </div>
-    )
-}
+  return (
+    <div>
+      <main className="main">
+        <Home />
+      </main>
+    </div>
+  );
+};
 
-export default App
+export default App;

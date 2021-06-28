@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.list {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 0.5px solid rgb(207, 205, 205);
+}
+.heading {
+  margin-bottom: 1.5rem;
+}
