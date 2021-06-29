@@ -8,12 +8,12 @@ import "./Modal.css";
 const Modal = (props) => {
   return (
     <Wrapper>
-      <Backdrop show={props.show} click={props.closeModal} />
+      <Backdrop show={props.appear} click={props.closeModal} />
       <div
         className="modalStyle"
         style={{
-          transform: props.show ? "translateY(0)" : "translateY(-100vh)",
-          opacity: props.show ? "1" : "0",
+          transform: props.appear ? "translateY(0)" : "translateY(-100vh)",
+          opacity: props.appear ? "1" : "0",
         }}
       >
         {props.children}

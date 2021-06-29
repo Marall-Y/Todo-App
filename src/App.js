@@ -2,14 +2,13 @@ import React from "react";
 import Home from "./pages/Home/Home";
 
 import "./App.css";
+import { Container } from "react-bootstrap";
 
 const App = () => {
   return (
-    <div>
-      <main className="main">
-        <Home />
-      </main>
-    </div>
+    <Container className="py-3">
+      <Home />
+    </Container>
   );
 };
 

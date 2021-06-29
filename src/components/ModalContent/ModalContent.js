@@ -9,8 +9,13 @@ const ModalContent = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-
     props.addItem({ title: title, description: description });
+
+    setTitle("");
+    setDescription("");
+
+    localStorage.setItem("title", title);
+    localStorage.setItem("description", description);
   };
 
   return (
