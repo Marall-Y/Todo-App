@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./pages/Home/Home";
 
 import "./App.css";
 import { Container } from "react-bootstrap";
+import Home from "./pages/Home/Home";
 
 const App = () => {
   return (

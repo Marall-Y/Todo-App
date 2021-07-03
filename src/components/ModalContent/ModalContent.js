@@ -1,31 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Form } from "react-bootstrap";
-
 import "./ModalContent.css";
 
-const ModalContent = (props) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-
-  const submitHandler = (event) => {
-    event.preventDefault();
-    props.addItem({ title: title, description: description });
-
-    setTitle("");
-    setDescription("");
-
-    localStorage.setItem("title", title);
-    localStorage.setItem("description", description);
-  };
-
+const ModalContent = ({ formHandler, todo, submitHandler }) => {
   return (
     <Form onSubmit={submitHandler}>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Title</Form.Label>
         <Form.Control
           type="text"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          name="title"
+          value={todo.title}
+          onChange={formHandler}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -33,12 +19,13 @@ const ModalContent = (props) => {
         <Form.Control
           as="textarea"
           rows={2}
-          value={description}
-          onChange={(event) => setDescription(event.target.value)}
+          name="description"
+          value={todo.description}
+          onChange={formHandler}
         />
       </Form.Group>
-      <Button variant="success" type="submit" onClick={props.closeModal}>
-        Create
+      <Button variant="success" type="submit">
+        {todo && todo.id ? "edit" : "create"}
       </Button>
     </Form>
   );
